@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
