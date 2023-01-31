@@ -8,20 +8,96 @@
     <title>Cool Air - Home page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/pe-icon7.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- For Arabic Only -->
+    <link rel="stylesheet" href="css/bootstrap.ar.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- End Arabic Links -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
     <div class="main">
-        <section class="intro"></section>
-        <section class="support-form">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <div class="logo-box">
+                    <img src="images/logo.png" alt="">
+                    <span>كوول اير</span>
+                </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-menu ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">من نحن</a>
+                  </li>
+              
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">تكيف منزلي</a>
+                  </li>
+              
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">تكيف مركزي</a>
+                  </li>
+              
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">اتصل بنا</a>
+                  </li>
+              
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-buttons">
+                  <li class="nav-item">
+                    <a href="#">
+                        <i class="pe-7s-user"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item search-icon">
+                    <a href="#">
+                        <i class="pe-7s-search"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">
+                        <i class="pe-7s-global"></i>
+                    </a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+            <div class="search-area">
+                <form>
+                    <input type="search" placeholder="اكتب بتدور علي اي هنا...">
+                    <button type="submit" class="btn">ابحث</button>
+                </form>
+            </div>
+          </nav>
+        <section class="intro" style="background-image: url('images/slider-1.jpg');">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="offset-7 col-5">
+                        <div class="intro-content">
+                            <h1>كوول اير للتكيفات</h1>
+                            <p>جرب النضارة مع الميزات المبتكرة والتصميمات الذكية لمكيفات الهواء من إل جي. تحتوي مكيفات LG على فلاتر HEPA تساعد في التقاط جزيئات الغبار والأوساخ والاحتفاظ بها.
+                            </p>
+                            <a href="#" class="btn">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="support-form">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
                         <form>
                             <div class="form-group">
                                 <label for="placeType">نوع المكان</label>
@@ -36,11 +112,154 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-group place-area">
+                                <label for="placeType">مساحة المكان</label>
+                                <div class="custom-radios">
+                                    <div class="custom-radio-box">
+                                        <input type="radio" name="placeSpaceArea" value="المكان بالكامل" >
+                                        <span>المكان بالكامل</span>
+                                    </div>
+                                    <div class="custom-radio-box">
+                                        <input type="radio" name="placeSpaceArea" value="غرف محددة">
+                                        <span>غرف محددة</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group uniq-area">
+                                <label for="placeType"> تفاصيل الغرف المحددة</label>
+                                <div class="for-append-more-area">
+                                    <div class="custom-texts">
+                                        <div class="custom-text-box">
+                                            <span> اسم الغرفة</span>
+                                            <input name="room_name" type="text" placeholder="....">
+                                        </div>
+                                        <div class="custom-text-box">
+                                            <span> مساحة الغرفة</span>
+                                            <input name="room_size" type="text" placeholder="....">
+                                        </div>
+                                        <div class="custom-buttons">
+                                            <div class="add-more-input">
+                                                <span class="pe-7s-plus"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="placeType">نوع التكييف</label>
+                                <div class="custom-radios">
+                                    <div class="custom-radio-box">
+                                        <input type="radio" name="airType" value="ساخن و بارد" >
+                                        <span>ساخن و بارد</span>
+                                    </div>
+                                    <div class="custom-radio-box">
+                                        <input type="radio" name="airType" value="بارد فقط">
+                                        <span>بارد فقط</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-buttons-group">
+                                <button class="btn" type="submit">إرسال المعلومات</button>
+                            </div>
                         </form>
+                    </div>
+                    <div class="col-md-5">
+                        <h5 class="section-title">الترشيحات المناسبة</h5>
+                        <div class="from-result">
+                            <div class="product-item product-card">
+                                <div class="product-card-image">
+                                    <a href="#"><img src="/images/products/product-1.webp" class="img-fluid" alt="product image"></a>
+                                </div>
+                                <div class="product-card-details">
+                                    <a href="#"><h2>Carrier Optimax Pro Air Conditioner, 1.5 HP, Cool and Heat, White - QHCT12N-708F
+                                    </h2></a>
+                                    <div class="product-card-price">
+                                        <span>12,545 <i>EGP</i></span>
+                                    </div>
+                                    <div class="product-card-btn">
+                                        <a href="#" class="btn">إشتري الان</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item product-card">
+                                <div class="product-card-image">
+                                    <a href="#"><img src="/images/products/product-2.webp" class="img-fluid" alt="product image"></a>
+                                </div>
+                                <div class="product-card-details">
+                                    <a href="#"><h2>Carrier Optimax Pro Air Conditioner, 1.5 HP, Cool and Heat, White - QHCT12N-708F
+                                    </h2></a>
+                                    <div class="product-card-price">
+                                        <span>12,545 <i>EGP</i></span>
+                                    </div>
+                                    <div class="product-card-btn">
+                                        <a href="#" class="btn">إشتري الان</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="about-us" style="background-image: url('https://www.lg.com/sa_en/images/plp-b2c/plp-b2c-5/saen-racwindowairconditioners-hero-2-d.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-inner-title">
+                            <span>لماذا كوول اير؟</span>
+                            <h2>تعرف علي افضل شركه لخدمات التكييف </h2>
+                            <p>حافظ على الدفء ، أو الرطوبة ، أو أيام الشتاء مع مجموعتنا من مكيفات الشباك من إل جي. تتميز بتصميم صديق للبيئة وموفر للطاقة مع فلاتر HEPA مدمجة ، ستبقيك مكيفات الهواء لدينا مرتاحًا بغض النظر عن الظروف الخارجية.</p>
+                            <div class="some-feature-we-do">
+                                <div class="sfwd-box">
+                                    <img src="images/icons/medal.png" alt="medal">
+                                    <h3>6,780</h3>
+                                    <p>Project completed</p>
+                                </div>
+                                <div class="sfwd-box">
+                                    <img src="images/icons/wallet.png" alt="medal">
+                                    <h3>6,780</h3>
+                                    <p>Project completed</p>
+                                </div>
+                                <div class="sfwd-box">
+                                    <img src="images/icons/warranty.png" alt="medal">
+                                    <h3>6,780</h3>
+                                    <p>Project completed</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-site-info">
+                            <div class="logo-box">
+                                <img src="/images/logo.png" alt="">
+                                <span>Cool air</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
     </div>
 </body>
 
